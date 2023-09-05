@@ -18,10 +18,13 @@ button.addEventListener("click", () => {
         })
         .then(data => {
             renderPokemonCard(data);
+        })
+        .catch(error => {
+            showError(error.message);
         });
 });
 
-const renderPokemonCard = (pokemonData) => {
+function renderPokemonCard(pokemonData) {
     const { name, types, height, weight, sprites } = pokemonData;
     const prokeType = types[0].type.name;
     const imgUrl = sprites.front_default;
