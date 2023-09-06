@@ -53,7 +53,7 @@ function renderPokemonCard(pokemonData) {
     container.innerHTML = PokeCardHTML;
 }
 
-function showError(errorMessage) {
+const showError = (errorMessage) => {
     const errorHTML = `<p class="error">${errorMessage}</p>`;
     container.innerHTML = errorHTML;
-}
+};
